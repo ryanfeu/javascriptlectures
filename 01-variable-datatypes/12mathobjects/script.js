@@ -30,4 +30,5 @@ x = Math.random();
 //get a random number between 1 and 100
 x = Math.floor(Math.random() * 100 + 1);
 // .99999 * 100 = 99.999
+
 console.log(x);
