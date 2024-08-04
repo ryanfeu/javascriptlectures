@@ -11,20 +11,22 @@ function createListiItem(item) {
 }
 createListiItem('Kirkland Milk Chocolate Almonds');
 
-//clean and performant
+// Clean & Performant
 function createNewItem(item) {
+  const li = document.createElement('li');
+  li.appendChild(document.createTextNode(item));
 
-const li
+  const button = document.createElement('button');
+  button.className = 'remove-item btn-link text-red';
 
-const button
+  const icon = document.createElement('i');
+  icon.className = 'fa-solid fa-xmark';
 
-const icon
+  button.appendChild(icon);
+  li.appendChild(button);
 
-
-button.appendChild(icon);
-li.appendChild(button)
-
-
+  document.querySelector('.items').appendChild(li);
 }
 
-createNewItem('Turon')
+createNewItem('Cheese');
+createNewItem('French Fries');
